@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BoomRioApp</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;     /* centraliza horizontalmente */
+    background: url('fundo.png') no-repeat center center;
+    background-size: cover; /* fundo cobre toda a tela */
+  }
+
+  /* Botão como imagem */
+  .botao {
+    display: block;
+    width: 60%;       /* largura proporcional à tela */
+    max-width: 300px; /* limite em telas grandes */
+    aspect-ratio: 829 / 281; /* mantém proporção original do b1.png */
+    background: url('b1.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.1s, filter 0.1s;
+  }
+
+  /* Efeito de toque – repete a cada clique */
+  .botao:active {
+    transform: scale(0.95);   /* encolhe */
+    filter: brightness(0.85); /* escurece */
+  }
+</style>
+</head>
+
+<body>
+  <a href="https://pkp2kk.com/main/inicio" class="botao"></a>
+</body>
+</html>

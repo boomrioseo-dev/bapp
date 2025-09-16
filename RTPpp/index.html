@@ -1,4 +1,104 @@
 <!DOCTYPE html><html lang="en-US" prefix="og: https://ogp.me/ns#" data-scrapbook-source="https://boomrio.vip" data-scrapbook-create="20250916184133243"><head>
+
+ <!-- Botão e menu -->
+  <button id="custom-menu-toggle" aria-controls="custom-mobile-menu" aria-expanded="false" aria-label="Abrir menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <ul class="mobile-menu" id="custom-mobile-menu" role="menu">
+    <li><a href="/index.html">Boomrio</a></li>
+    <li><a href="/RTPpp">Jogos da Pragmatic</a></li>
+    <li><a href="/rtppg">Jogos da Pocket Game Soft</a></li>
+    <li><a href="https://rptnrg.com?ch=17557">Register</a></li>
+  </ul>
+
+  <!-- CSS do menu hamburguer -->
+  <style>
+  /* === HAMBURGER_FIX v2 === */
+  #custom-menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 9999;
+    display: none; /* só mostra no mobile */
+    width: 32px;
+    height: 24px;
+    padding: 0;
+  }
+  #custom-menu-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  #custom-menu-toggle .bar:nth-child(2) {
+    margin: 7px 0;
+  }
+  /* Estado ativo -> vira X */
+  #custom-menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+  #custom-menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #custom-menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  #custom-mobile-menu {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 56px;
+    width: 100%;
+    z-index: 9998;
+    background: #000;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+  #custom-mobile-menu.open {
+    display: flex !important;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  #custom-mobile-menu li {
+    list-style: none;
+  }
+  #custom-mobile-menu a {
+    display: block;
+    padding: 14px 18px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  #custom-mobile-menu a:hover {
+    background: #111;
+  }
+
+  /* Só mostra no mobile */
+  @media (max-width: 921px) {
+    #custom-menu-toggle {
+      display: block !important;
+    }
+  }
+  @media (min-width: 922px) {
+    #custom-menu-toggle,
+    #custom-mobile-menu {
+      display: none !important;
+    }
+  }
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11"> 
@@ -169,7 +269,7 @@ flexibility(document.documentElement);
 													<div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
 										<div class="ast-builder-layout-element ast-flex site-header-focus-item" data-section="title_tagline">
 							<div class="site-branding ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope">
-					<span class="site-logo-img"><a href="https://boomrio.org/" class="custom-logo-link" rel="home"><img width="240" height="67" src="boomrio-logo-240x67.png" class="custom-logo" alt="boomrio logo" decoding="async" srcset="boomrio-logo-240x67.png 240w, boomrio-logo-300x84.png 300w, boomrio-logo-768x215.png 768w, boomrio-logo.png 1000w" sizes="(max-width: 240px) 100vw, 240px"></a></span>				</div>
+					<span class="site-logo-img"><a href="https://boomrio.vip/" class="custom-logo-link" rel="home"><img width="240" height="67" src="boomrio-logo-240x67.png" class="custom-logo" alt="boomrio logo" decoding="async" srcset="boomrio-logo-240x67.png 240w, boomrio-logo-300x84.png 300w, boomrio-logo-768x215.png 768w, boomrio-logo.png 1000w" sizes="(max-width: 240px) 100vw, 240px"></a></span>				</div>
 			<!-- .site-branding -->
 					</div>
 									</div>
@@ -4889,6 +4989,25 @@ flexibility(document.documentElement);
 			
 				
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleBtn = document.querySelector('.ast-button-wrap .menu-toggle');
+  const menu = document.querySelector('.ast-mobile-popup-content');
 
+  if (toggleBtn && menu) {
+    toggleBtn.addEventListener('click', function () {
+      toggleBtn.classList.toggle('active');
+    });
+
+    // Fecha menu ao clicar em qualquer link
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggleBtn.classList.remove('active');
+        document.body.classList.remove('ast-mobile-popup-active');
+      });
+    });
+  }
+});
+</script>
 
 </body></html><!-- Page cached by LiteSpeed Cache 7.5.0.1 on 2025-09-16 15:22:27 -->

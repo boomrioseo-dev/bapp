@@ -130,72 +130,7 @@ flexibility(document.documentElement);
 <meta content="https://boomrio.vip/wp-content/uploads/2025/06/cropped-boomrio-icon-270x270.jpg" name="msapplication-TileImage">
 <script data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement {}); } })(["ed649f6d-3579-4bb2-84ed-cc2f437ed66a"])</script>
 <style>
-/* Botão hamburguer mobile (escondido no desktop) */
-#custom-menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 2001;
-}
 
-/* Ícone */
-#custom-menu-toggle svg {
-  width: 28px;
-  height: 28px;
-  fill: #fff;
-}
-
-/* Menu mobile (overlay) */
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  position: fixed;
-  top: 50px;
-  left: 0;
-  width: 100%;
-  max-height: calc(100vh - 60px);
-  overflow-y: auto;
-  background: #111;
-  z-index: 2000;
-  padding: 16px 0;
-  margin: 0;
-  list-style: none;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.35);
-}
-
-/* Links */
-.mobile-menu li { text-align: center; }
-.mobile-menu li a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  padding: 12px 16px;
-}
-.mobile-menu li a:active,
-.mobile-menu li a:hover { background: #222; }
-
-/* Abrir */
-.mobile-menu.open { display: flex !important; }
-
-/* Bloquear scroll quando menu aberto */
-body.no-scroll { overflow: hidden; }
-
-/* Mostrar só no mobile */
-@media (max-width: 921px) {
-  #custom-menu-toggle { display: block !important; }
-  /* Esconder menu original do tema */
-  .main-header-menu { display: none !important; }
-}
-
-/* Esconder no desktop */
-@media (min-width: 922px) {
-  #custom-menu-toggle, .mobile-menu { display: none !important; }
-}
-</style>
 <script data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement {}); } })(["ed649f6d-3579-4bb2-84ed-cc2f437ed66a"])</script></head>
 <body class="home wp-singular page-template page-template-elementor_header_footer page page-id-9 wp-custom-logo wp-theme-astra ast-desktop ast-page-builder-template ast-no-sidebar astra-4.11.11 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-template-full-width elementor-kit-7 elementor-page elementor-page-9 e--ua-firefox" data-elementor-device-mode="desktop" itemscope="itemscope" itemtype="https://schema.org/WebPage" style="">
 <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menu" id="custom-menu-toggle">

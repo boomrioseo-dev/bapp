@@ -30,14 +30,14 @@
 .u-section-1 .u-image-2 {
   width: 1234px;
   height: 735px;
-  margin: 31px 0 0 auto;
+  margin: 30px auto 0;
 }
 
 .u-section-1 .u-group-1 {
   height: auto;
   min-height: 140px;
   width: calc(((100% - 1140px) / 2)  + 1140px);
-  margin: 0 0 60px auto;
+  margin: 1px 0 60px auto;
 }
 
 .u-section-1 .u-container-layout-1 {
@@ -201,7 +201,6 @@
     height: 203px;
     margin-top: 22px;
     margin-left: auto;
-    margin-right: auto;
   }
 
   .u-section-1 .u-group-1 {

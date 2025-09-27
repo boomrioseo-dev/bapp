@@ -47044,7 +47044,7 @@ a.u-link.u-text-hover-color-var:hover {
 .u-header .u-image-1 {
   width: 226px;
   height: 63px;
-  margin: -50px auto 8px 13px;
+  margin: -49px auto 8px 114px;
 }
 @media (max-width: 1199px) {
   .u-header .u-menu-1 {
@@ -47052,8 +47052,8 @@ a.u-link.u-text-hover-color-var:hover {
   }
 
   .u-header .u-image-1 {
-    margin-top: -50px;
-    margin-left: 13px;
+    margin-top: -49px;
+    margin-left: 114px;
   }
 }
 
@@ -47070,9 +47070,9 @@ a.u-link.u-text-hover-color-var:hover {
   }
 
   .u-header .u-image-1 {
-    margin-top: -48px;
+    margin-top: -47px;
     margin-bottom: 15px;
-    margin-left: -34px;
+    margin-left: -3px;
   }
 }
  .u-footer {
